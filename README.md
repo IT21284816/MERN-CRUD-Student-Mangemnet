@@ -1,11 +1,11 @@
 MERN CRUD, Serch, Report-Genaration
 
 FRONTEND:-
-cd frontend 
+cd frontend /
 npm i
 
 BACKEND :-
-cd backend
+cd backend /
 npm i
 
 ![image](https://github.com/IT21284816/MERN-CRUD-Student-Mangemnet/assets/99232799/20887ee9-a786-4cd8-8dd7-2bf2215648ae)
