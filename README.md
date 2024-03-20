@@ -2,7 +2,7 @@ MERN CRUD, Serch, Report-Genaration
 
 FRONTEND:-
 cd frontend /
-npm i/
+npm i /
 npm start
 
 BACKEND :-
