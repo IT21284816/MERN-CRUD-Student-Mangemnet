@@ -1,4 +1,3 @@
-import './App.css';
 import Allstud from './component/Allstud';
 import Navbar from './component/Navbar';
 import {
