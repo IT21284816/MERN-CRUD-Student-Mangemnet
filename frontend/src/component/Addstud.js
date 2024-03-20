@@ -60,7 +60,7 @@ export default function Addstud() {
     }
     return (
         <div className='container mt-5'>
-            <h4>All New Student Information</h4>
+            <h4>New Project Registration</h4>
             <div className='underline1'></div>
             <form className='mt-5 shadow p-5 w-75'>
                 <div className="mb-3">

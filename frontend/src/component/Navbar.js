@@ -11,11 +11,11 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item ">
-                            <NavLink className="nav-link text-white"  to="/allstud">All Student</NavLink>
+                            <NavLink className="nav-link text-white"  to="/allstud">All Projects</NavLink>
                         </li>
                         
                         <li className="nav-item">
-                            <NavLink className="nav-link text-white"  to="/addstud">Add New Student</NavLink>
+                            <NavLink className="nav-link text-white"  to="/addstud">Project Registration</NavLink>
                         </li>
                         
                     </ul>
