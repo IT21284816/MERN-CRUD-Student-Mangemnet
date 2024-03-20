@@ -77,8 +77,8 @@ export default function Allstud() {
         // add table data to PDF
         doc.autoTable({
             startY: 40, // set Y position to start the table
-            head: [['No', 'Name', 'Address', 'Subject', 'Contact']],
-            body: getstud.map((result, id) => [id + 1, result.name, result.address, result.subject, result.contact])
+            head: [['No', 'Name', 'Re Number', 'Email', 'Contact']],
+            body: getstud.map((result, id) => [id + 1, result.nameS1, result.regNoS1, result.emailS1, result.contactS1])
         });
     
         // save PDF file
@@ -109,8 +109,8 @@ export default function Allstud() {
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Subject</th>
+                        <th scope="col">Re Number</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Contact </th>
                         <th scope="col">Action </th>
                     </tr>
@@ -129,10 +129,10 @@ export default function Allstud() {
 
                                 <tr key={id}>
                                     <th scope="row">{id + 1}</th>
-                                    <td>{result.name}</td>
-                                    <td>{result.address}</td>
-                                    <td>{result.subject}</td>
-                                    <td>{result.contact}</td>
+                                    <td>{result.nameS1}</td>
+                                    <td>{result.regNoS1}</td>
+                                    <td>{result.emailS1}</td>
+                                    <td>{result.contactS1}</td>
                                     <td>
                                         <Link className='btn btn-success ms-2' to={`/view/${result._id}`}>View</Link>
                                         <Link className='btn btn-warning ms-2' to={`/edit/${result._id}`}>Update</Link>

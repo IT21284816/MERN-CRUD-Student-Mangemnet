@@ -35,10 +35,10 @@ export default function View() {
             <div className='underline'></div>
             <ul className="list-group w-50 mt-4">
                 <li className="list-group-item active" aria-current="true">All Information About</li>
-                <li className="list-group-item">Student Name:- {getstud.name}</li>
-                <li className="list-group-item">Student Address:-  {getstud.address}</li>
-                <li className="list-group-item">Student Subject:-  {getstud.subject}</li>
-                <li className="list-group-item">Student Mobile:-  {getstud.contact}</li>
+                <li className="list-group-item">Student Name:- {getstud.nameS1}</li>
+                <li className="list-group-item">Student Registration Number:-  {getstud.regNoS1}</li>
+                <li className="list-group-item">Student Email:-  {getstud.emailS1}</li>
+                <li className="list-group-item">Student Contact Number:-  {getstud.contactS1}</li>
             </ul>
             <Link className='btn btn-primary mt-5' to="/allstud">Back</Link>
         </div>

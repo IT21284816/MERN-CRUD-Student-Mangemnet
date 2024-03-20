@@ -1,18 +1,18 @@
 const mongoose= require("mongoose");
 const studSchema = new mongoose.Schema({
-    name:{
+    nameS1:{
         type:String,
         required:true
     },
-    address:{
+    regNoS1:{
         type:String,
         required:true
     },
-    subject:{
+    emailS1:{
         type:String,
         required:true
     },
-    contact:{
+    contactS1:{
         type:Number,
         required:true
     }

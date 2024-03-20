@@ -8,19 +8,19 @@ export default function Edit() {
     const navigate = useNavigate();
     
     const [inputdata,setInputdata]=useState({
-        "name":"",
-        "address":"",
-        "subject":"",
-        "contact":""
+        "nameS1":"",
+        "regNoS1":"",
+        "emailS1":"",
+        "contactS1":""
     })
     
     //onchange function
     const setstud=(e)=>{
         console.log(e.target.value);
-        const {name,value}=e.target;
+        const {nameS1,value}=e.target;
         setInputdata((prestud)=>{
             return{
-                ...prestud,[name]:value
+                ...prestud,[nameS1]:value
             }
         })
     }
@@ -55,14 +55,14 @@ export default function Edit() {
     const updatestud= async(e)=>{
         e.preventDefault();
 
-        const {name, address, subject, contact} =inputdata;
+        const {nameS1,regNoS1, emailS1, contactS1} =inputdata;
         const res2 = await fetch(`http://localhost:5000/updatestud/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name,address, subject, contact
+                nameS1,regNoS1, emailS1, contactS1
             })
         });
         const data2= await res2.json();
@@ -88,26 +88,27 @@ export default function Edit() {
             <h4>Edit Student Information</h4>
             <div className='underline1'></div>
             <form className='mt-5 shadow p-5 w-75'>
-                <div className="mb-3">
+            <div className="mb-3">
                     <label htmlFor="exampleFormControlInput1" className="form-label">Student Name</label>
                     <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter Student Name" 
-                    onChange={setstud} name="name" value={inputdata.name}/>
+                    onChange={setstud} name="nameS1" value={inputdata.nameS1}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlInput1" className="form-label">Student Address</label>
-                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter Student Address"
-                    onChange={setstud} name="address" value={inputdata.address}/>
+                    <label htmlFor="exampleFormControlInput1" className="form-label">Student Registration Number</label>
+                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter Student Student Registration Number"
+                    onChange={setstud} name="regNoS1" value={inputdata.regNoS1}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlInput1" className="form-label">Student Subject</label>
-                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter Subject Name" 
-                    onChange={setstud} name="subject" value={inputdata.subject}/>
+                    <label htmlFor="exampleFormControlInput1" className="form-label">Student Email</label>
+                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter Email" 
+                    onChange={setstud} name="emailS1" value={inputdata.emailS1}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlInput1" className="form-label">Student Mobile</label>
+                    <label htmlFor="exampleFormControlInput1" className="form-label">Student Contact Number</label>
                     <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Enter Contact Number"
-                    onChange={setstud} name="contact" value={inputdata.contact}/>
+                    onChange={setstud} name="contactS1" value={inputdata.contactS1}/>
                 </div>
+                <br></br>
                 <div className='d-flex'>
                          <button className='btn btn-primary' onClick={updatestud}>update Student</button>
                          <ToastContainer />
